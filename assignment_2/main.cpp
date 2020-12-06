@@ -1,5 +1,6 @@
 #include "Book.hpp"
 #include "Ps2Game.hpp"
+#include "Vinyl.hpp"
 
 int main() {
   // std::string title = "1984";
