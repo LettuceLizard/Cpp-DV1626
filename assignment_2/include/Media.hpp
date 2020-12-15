@@ -1,14 +1,20 @@
 #pragma once
 #include <string>
 #include <iostream> //TEMP used for cout
+#include <vector>
 
 class Media {
 public:
+  Media();
   Media(const std::string& title);
-  virtual ~Media();
+  virtual ~Media() = 0;
+  Media(const Media &other);
 
-  virtual std::string prettyPrint();
+  bool operator==(const Media& other) const;
+  bool operator!=(const Media& other) const;
 
-  // int year;
-  const std::string& title;
+  virtual std::string prettyPrint() const = 0;
+
+protected:
+  const std::string title;
 };

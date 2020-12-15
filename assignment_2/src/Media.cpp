@@ -1,13 +1,15 @@
 #include "Media.hpp"
 
 Media::Media(const std::string& title)
-: title(title) {
-  std::cout << "--------Constructing constructing Media" << std::endl;
-}
-Media::~Media() {
-  std::cout << "--------Destroying deconstructing Media" << std::endl;
-}
+: title(title) {}
 
-std::string Media::prettyPrint() {
-  return "yeet";
+Media::~Media() {}
+
+Media::Media(const Media &other) : title(other.title) {}
+
+bool Media::operator==(const Media& other) const {
+  return title == other.title;
+}
+bool Media::operator!=(const Media& other) const {
+  return title != other.title;
 }

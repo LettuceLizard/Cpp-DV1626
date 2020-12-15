@@ -11,6 +11,6 @@ public:
   const std::string& getName() const;
   const Time& getLength() const;
 private:
-  const std::string& name;
-  const Time& length;
+  const std::string name;
+  const Time length;
 };
