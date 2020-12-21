@@ -14,18 +14,21 @@ int main() {
   std::cout << v1.size() << std::endl;
 
   Vector<std::string> v2;
-  if (v2.empty()) {
-    std::cout << "1 is empty" << std::endl;
-  }
   for (int i = 0; i < 100; i++) {
-    v2.push_back("ya yeet");
-    std::cout << v2.at(i) << " ";
+    v2.push_back("-");
+  }
+  v2.insert(0, "|");
+  v2.insert(8, "|");
+  v2.insert(5, "|");
+  v2.push_back("a");
+
+
+
+  for (int i = 0; i < v2.size(); i++) {
+    std::cout << v2.at(i);
+
   }
   std::cout << v2.size() << std::endl;
   std::cout << std::endl;
-
-  if (v2.empty()) {
-    std::cout << "2 is empty" << std::endl;
-  }
 
 }
